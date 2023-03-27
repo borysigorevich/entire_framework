@@ -10,11 +10,16 @@ export const Home = () => {
 
     return (
         <div className='h-full grid place-content-center'>
-            {loading && <p>Loading...</p>}
-
-            {data?.menuItems?.data.map(item => (
-                <Item key={item.id} title={item.attributes?.title!}/>
-            ))}
+            {loading
+                ? <p>Loading...</p>
+                : (
+                    <div className='grid place-items-start'>
+                        {data?.menuItems?.data.map(item => (
+                            <Item key={item.id} title={item.attributes?.title!}/>
+                        ))}
+                    </div>
+                )
+            }
         </div>
     );
 };

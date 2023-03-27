@@ -8,3 +8,35 @@
         font-family: "IBM Plex Mono", monospace;;
     }
 }
+
+@layer components {
+    .link {
+        box-shadow: 5px 0 0 20px rgb(37,37,37);
+        position: relative;
+        z-index: 5;
+    }
+
+    .link:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 57px;
+        width: 50px;
+        background-color: rgb(37, 37, 37);
+        box-shadow: -10px 0 0 20px rgb(37,37,37), 10px 0 0 20px rgb(37,37,37);
+    }
+
+    .link:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        background-color: rgb(37, 37, 37);
+        box-shadow: -10px 0 0 20px rgb(37,37,37), 10px 0 0 20px rgb(37,37,37);
+    }
+}
