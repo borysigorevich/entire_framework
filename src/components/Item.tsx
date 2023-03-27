@@ -20,7 +20,7 @@ export const Item = ({title}: ItemProps) => {
 
     return (
         <div
-            className={`relative w-full mb-1`}
+            className={`relative w-full ${query === title ? 'md-0' : 'mb-1'}`}
         >
             <div className={`
             text-white text-start relative transition-all duration-[1s] overflow-hidden [transition-timing-function:ease] text-[44px] max-w-[320px]`}
