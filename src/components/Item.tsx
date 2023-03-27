@@ -12,7 +12,7 @@ export const Item = ({title}: ItemProps) => {
         <div
             className={`
             ${params['label'] === title ? '0' : 'pt-[7px] px-3 pb-[9px]'} bg-black text-white text-center transition-all duration-[1s] 
-            overflow-hidden min-w-[206px]`}
+            overflow-hidden min-w-[206px] [transition-timing-function:ease]`}
             style={{
                 maxHeight: params['label'] === title ? 0 : '40px',
             }}
