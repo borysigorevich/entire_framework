@@ -11,10 +11,10 @@ export const Item = ({title}: ItemProps) => {
     return (
         <div
             className={`
-            ${params['*'] === title ? '0' : 'pt-[7px] px-3 pb-[9px]'} bg-black text-white text-center transition-all duration-[1s] 
+            ${params['label'] === title ? '0' : 'pt-[7px] px-3 pb-[9px]'} bg-black text-white text-center transition-all duration-[1s] 
             overflow-hidden min-w-[206px]`}
             style={{
-                maxHeight: params['*'] === title ? 0 : '40px',
+                maxHeight: params['label'] === title ? 0 : '40px',
             }}
         >
             <Link to={'/' + title}>{title}</Link>

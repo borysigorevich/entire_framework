@@ -9,9 +9,13 @@ const client = new ApolloClient({
 
 const router = createBrowserRouter([
     {
-        path: '/*',
+        path: '/',
         element: <Home/>
-    }
+    },
+    {
+        path: '/:label',
+        element: <Home/>
+    },
 ])
 
 function App() {
